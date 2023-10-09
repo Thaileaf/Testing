@@ -10,7 +10,6 @@
   "private": "false",
   "scripts": {
     "test": "jest",
-    "test:ci": "jest --ci --reporters='default' --reporters='./tests/infra/githubActionsReporter'",
     "lint": "eslint --ext=.js --ignore-path=.gitignore src"
   },
   "devDependencies": {
