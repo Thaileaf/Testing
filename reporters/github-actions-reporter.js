@@ -4,6 +4,10 @@ export class GithubActionsReporter {
     this._options = options;
   }
 
+  onRunStart(results, options) {
+    console.log('Starting custom run');
+  }
+
   onRunComplete(contexts, results) {
     for (const testResultItem of results.testResults) {
       const { testFilePath, testResults } = testResultItem;
@@ -33,3 +37,4 @@ export class GithubActionsReporter {
 }
 
 export default GithubActionsReporter;
+
